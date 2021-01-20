@@ -1,0 +1,50 @@
+{% load static %}
+</head>
+<link rel="stylesheet" type="text/css" href="{% static 'styles/registration.css'%}">
+<body>
+	<!-- main -->
+	<div class="main-w3layouts wrapper">
+		<h1>Student Signup</h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<form action="registration" method="post">
+					{% csrf_token %}
+					<input class="text" type="text" name="first_name" placeholder="First Name" required="" ><br>
+					<input class="text" type="text" name="last_name" placeholder="Last Name" required="" ><br>
+					<input class="text" type="text" name="username" placeholder="Roll No" required="" >
+					<input class="text email" type="email" name="email" placeholder="Email" required="">
+					<input class="text" type="password" name="pass1" placeholder="Password" required="">
+					<input class="text w3lpass" type="password" name="pass2" placeholder="Confirm Password" required="">
+					<div class="wthree-text">
+						<label class="anim">
+						</label>
+						<div class="clear"> </div>
+					</div>
+					<input type="submit">
+				</form>
+				{% for message in messages %}
+				<h2 style="color:white"><b>{{message}}!</b></h2>
+				{% endfor %}
+			</div>
+		</div>
+		<!-- copyright -->
+		<div class="colorlibcopy-agile">
+			
+		</div>
+		<!-- //copyright -->
+		<ul class="colorlib-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<!-- //main -->
+</body>
+</html>
